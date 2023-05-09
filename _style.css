@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html {
+    color: #1f1f1f;
+    background-color: #f3f3f3;
+    background-image: url('https://images.unsplash.com/photo-1629968417850-3505f5180761?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+    font-family: 'Poppins';
+
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    /* padding: cima-baixo esquerda-direita; */
+    padding: 1rem 0;
+
+    /* padding: cima direita baixo esquerda (relogio) */
+    /* padding: 0 16 0 16 */
+
+    width: 100%;
+
+    background-color: gray;
+}
+
+nav>a {
+    color: white;
+}
+
+nav>a:hover {
+    text-decoration: white underline;
+    text-underline-offset: 8px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 600px;
+    height: 100vh;
+
+    padding: 2rem;
+
+    /* account for fixed nav height (57px) */
+    padding-top: calc(2rem + 57px);
+
+    margin: 0 auto;
+
+    text-align: justify;
+}
+
+section>header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section>header>h1 {
+    font-size: 2rem;
+}
+
+.portfolio {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, auto);
+
+}
+
+.portfolio__item {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5px;
+    border: 1px solid #1f1f1f;
+    background-color: #1f1f1f;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+    .portfolio__item__footer {
+        padding: 0.5rem 1rem;
+
+        color: white;
+    }
+
+    .contacts {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .contacts__item {
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 45px;
+        height: 45px;
+
+        border-radius: 50%;
+        background-color: gray;
+    }
+
+    .contacts__item i {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        margin-top: auto;
+
+        padding-bottom: 1rem;
+
+        text-align: center;
+    }
+
+    .titulo-contato {
+        margin-top: 2rem;
+    }
